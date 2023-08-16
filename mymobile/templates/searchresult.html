@@ -1,0 +1,92 @@
+{% extends 'basic.html' %}
+{% block title %}Product Page - THE COMPUTER'S TOWN{% endblock %}
+{% block body %}
+{% load static %}
+<div class="ads-grid py-sm-5 py-4">
+		<div class="container py-xl-4 py-lg-2">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+				<span class="font-weight-normal">Our</span> New Products</h3>
+			<!-- //tittle heading -->
+			<div class="row">
+				<!-- product right -->
+
+				<!-- product right -->
+				<div class="agileinfo-ads-display col-lg-12 order-lg-last order-first">
+					<div class="wrapper">
+						<!-- first section -->
+						<div class="product-sec1 px-lg-4">
+							<div class="row">{% if items_page %}
+					{% for i in post %}
+								<div class="col-md-4 product-men">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="media/{{i.Pro_image}}" alt="" height="130px">
+
+										</div>
+										<div class="item-info-product text-center mt-2">
+											<h4 class="pt-1">
+												<a href="/single/{{i.id}}">{{i.Pro_name}}</a>
+											</h4>
+											<div class="info-product-price">
+												<span class="item_price">Rs. {{i.Pro_price}}</span>
+											</div>
+
+										</div>
+									</div>
+								</div>{% endfor %}
+							</div>
+						</div>
+						<!-- //first section -->
+						<!-- second section -->
+
+						<!-- //second section -->
+						<!-- 3rd section -->
+
+						<!-- //3rd section -->
+						<!-- fourth section -->
+
+						<!-- //fourth section -->
+					</div>
+				</div>
+				<!-- //product right -->
+			</div>
+		</div>
+	</div>
+<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="block-27">
+
+    {% if items_page.has_other_pages %}
+    <div class="btn-group" role="group" aria-label="Item pagination">
+        {% if items_page.has_previous %}
+            <a href="?page={{ items_page.previous_page_number }}" class="btn btn-outline-primary">&laquo;</a>
+        {% endif %}
+
+        {% for page_number in items_page.paginator.page_range %}
+            {% if items_page.number == page_number %}
+                <button class="btn btn-outline-primary active">
+                    <span>{{ page_number }} <span class="sr-only">(current)</span></span>
+                </button>
+            {% else %}
+                <a href="?page={{ page_number }}" class="btn btn-outline-primary">
+                    {{ page_number }}
+                </a>
+            {% endif %}
+        {% endfor %}
+
+        {% if items_page.has_next %}
+            <a href="?page={{ items_page.next_page_number }}" class="btn btn-outline-primary">&raquo;</a>
+        {% endif %}
+    </div>
+    {% endif %}
+{% else %}
+    <p>No items found.</p>
+{% endif %}
+		            </div>
+					</div>
+				</div>
+
+
+
+{% endblock %}

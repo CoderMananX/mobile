@@ -1,0 +1,200 @@
+{% extends 'basic.html' %}
+{% block title %}THE COMPUTER'S TOWN {% endblock %}
+
+
+{% block body %}
+{% include 'messages.html' %}
+{% load static %}
+
+
+<!-- banner --><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<!-- Indicators-->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item item1 active">
+				<div class="banner-style d-flex align-items-center">
+					<div class="container">
+						<div class="w3l-space-banner">
+							<div class="carousel-caption-banner" style="max-width:500px">
+								<h3 class="mt-2">Exciting Deals on Laptop's</h3>
+								<a class="btn btn-style mt-4" href="{% url 'product.html' %}">Shop Now </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item item2">
+				<div class="banner-style d-flex align-items-center">
+					<div class="container">
+						<div class="w3l-space-banner">
+							<div class="carousel-caption-banner" style="max-width:500px">
+								<p>Top
+									<span>Brands</span> lowest <span>Prices</span></p>
+								<h3 class="mt-2">Wide Range of All Product's</h3>
+								<a class="btn btn-style mt-4" href="{% url 'product.html' %}">Shop Now </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+	</div><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	<!-- //banner -->
+<div style="margin: 8px auto; display: block; text-align:center;">
+
+<!---728x90--->
+
+
+</div>
+	<!-- top Products -->
+	<div class="ads-grid py-5">
+		<div class="container py-md-5 py-4">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+				<span class="font-weight-normal">Our</span> New Products</h3>
+			<!-- //tittle heading -->
+			<div class="row">
+				<!-- product right -->
+				<div class="col-lg-3 mt-lg-0 mt-4 p-lg-0 order-lg-first order-last">
+					<div class="side-bar p-sm-4 p-3">
+						<!-- reviews -->
+
+						<!-- //reviews -->
+						<!-- price -->
+						<div class="range py-2">
+							<h3 class="agileits-sear-head mb-3">All </h3>
+							<div class="w3l-range">
+								<ul>
+									<li>
+										<a href="/categorywiseproduct/11">All In One</a>
+									</li>
+									<li class="my-1">
+										<a href="/categorywiseproduct/12">Desktop System</a>
+									</li>
+									<li>
+										<a href="/categorywiseproduct/13">iPad</a>
+									</li>
+									<li class="my-1">
+										<a href="/categorywiseproduct/14">Laptops</a>
+									</li>
+									<li>
+										<a href="/categorywiseproduct/15">MacBook</a>
+									</li>
+									<li class="mt-1">
+										<a href="/categorywiseproduct/16">Moniter</a>
+									</li>
+									<li class="mt-1">
+										<a href="/categorywiseproduct/17">Printers</a>
+									</li>
+									<li class="mt-1">
+										<a href="/categorywiseproduct/18">Server</a>
+									</li>
+									<li class="mt-1">
+										<a href="/categorywiseproduct/19">Accessories</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //price -->
+						<!-- discounts -->
+
+						<!-- //discounts -->
+						<!-- electronics -->
+						<!-- //electronics -->
+						<!-- delivery -->
+
+						<!-- //delivery -->
+						<!-- arrivals -->
+
+						<!-- //arrivals -->
+						<!-- best seller -->
+
+						<!-- //best seller -->
+					</div>
+					<!-- //product right -->
+				</div>
+				<!-- product left -->
+				<div class="agileinfo-ads-display col-lg-9 order-lg-last order-first">
+					<div class="wrapper">
+						<!-- first section -->
+						<div class="product-sec1 px-lg-4">
+							<div class="row">{% for p in productdetails %}
+								{% if forloop.counter < 4 %}
+								<div class="col-md-4 product-men">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="media/{{p.Pro_image}}" alt="" height="130px">
+
+										</div>
+										<div class="item-info-product text-center mt-2">
+											<h4 class="pt-1">
+												<a href="/single/{{p.id}}">{{p.Pro_name}}</a>
+											</h4>
+											<div class="info-product-price">
+												<span class="item_price">Rs. {{p.Pro_price}}</span>
+<!--												<del>Rs. {{ p.Pro_price }}</del>-->
+											</div>
+										</div>
+									</div>
+								</div>{% endif %}{% endfor %}
+
+
+							</div>
+						</div>
+						<!-- //first section -->
+						<!-- second section -->
+
+						<!-- //second section -->
+						<!-- third section -->
+
+						<!-- //third section -->
+						<!-- fourth section -->
+
+						<!-- //fourth section -->
+						<!-- 5th section -->
+
+						<!-- 5th section -->
+					</div>
+				</div>
+				<!-- //product left -->
+			</div>
+		</div>
+	</div>
+	<!-- //top products -->
+
+	<!-- middle section -->
+
+
+			<div class="row">
+				<div class="col-lg-6">
+
+				</div>
+				<div class="col-lg-4 ">
+						<a href="/product" class="btn btn-style btn-style-secondary ">View all Products</a>
+				</div>
+			</div>
+
+
+	<!-- middle section -->
+<div style="margin: 8px auto; display: block; text-align:center;">
+
+<!---728x90--->
+
+</div>
+{% endblock %}

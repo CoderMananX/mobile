@@ -1,0 +1,13 @@
+<input type="text" id="input">
+<script>
+var input = document.getElementById("input");
+
+input.onkeydown = function () {
+    if (input.value.length > 0) {
+
+        if (input.value.length % 4 == 0) {
+            input.value += " ";
+        }
+    }
+}
+</script>

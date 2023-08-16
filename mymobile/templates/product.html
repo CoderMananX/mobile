@@ -1,0 +1,319 @@
+{% extends 'basic.html' %}
+{% block title %}Products - THE COMPUTER'S TOWN{% endblock %}
+{% block body %}
+{% load static %}
+
+	<!-- //navigation -->
+
+	<!-- banner-2 -->
+	<div class="page-head_agile_info_w3l">
+		<div class="container py-5">
+			<h3 class="title-style pt-5">The Best <span>Deals</span> on LAPTOPS AND DESKTOPS  </h3>
+			<ul class="w3_short pt-3 pb-5">
+				<li>
+					<a href=" {% url 'index.html' %} ">Home</a>
+					<i class="fa fa-angle-right mx-2" aria-hidden="true"></i>
+				</li>
+				<li>ALL PRODUCT'S</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //banner-2 -->
+	<!-- page -->
+	<div class="services-breadcrumb">
+		<div class="agile_inner_breadcrumb">
+
+		</div>
+	</div>
+	<!-- //page -->
+<div style="margin: 8px auto; display: block; text-align:center;">
+
+<!---728x90--->
+
+ 
+</div>
+	<!-- top Products -->
+	<div class="ads-grid py-sm-5 py-4">
+		<div class="container py-xl-4 py-lg-2">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+				<span class="font-weight-normal">Our</span> New Products</h3>
+			<!-- //tittle heading -->
+			<div class="row">
+				<!-- product right -->
+
+				<!-- product right -->
+				<div class="agileinfo-ads-display col-lg-12 order-lg-last order-first">
+					<div class="wrapper">
+						<!-- first section -->
+						<div class="product-sec1 px-lg-4">
+							<div class="row">{% if items_page %}
+					{% for item in items_page %}
+								<div class="col-md-4 product-men">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="media/{{item.Pro_image}}" alt="" height="130px">
+
+										</div>
+										<div class="item-info-product text-center mt-2">
+											<h4 class="pt-1">
+												<a href="/single/{{item.id}}">{{item.Pro_name}}</a>
+											</h4>
+											<div class="info-product-price">
+												<span class="item_price">Rs. {{item.Pro_price}}</span>
+											</div>
+
+										</div>
+									</div>
+								</div>{% endfor %}
+							</div>
+						</div>
+						<!-- //first section -->
+						<!-- second section -->
+
+						<!-- //second section -->
+						<!-- 3rd section -->
+
+						<!-- //3rd section -->
+						<!-- fourth section -->
+
+						<!-- //fourth section -->
+					</div>
+				</div>
+				<!-- //product right -->
+			</div>
+		</div>
+	</div>
+<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="block-27">
+
+    {% if items_page.has_other_pages %}
+    <div class="btn-group" role="group" aria-label="Item pagination">
+        {% if items_page.has_previous %}
+            <a href="?page={{ items_page.previous_page_number }}" class="btn btn-outline-primary">&laquo;</a>
+        {% endif %}
+
+        {% for page_number in items_page.paginator.page_range %}
+            {% if items_page.number == page_number %}
+                <button class="btn btn-outline-primary active">
+                    <span>{{ page_number }} <span class="sr-only">(current)</span></span>
+                </button>
+            {% else %}
+                <a href="?page={{ page_number }}" class="btn btn-outline-primary">
+                    {{ page_number }}
+                </a>
+            {% endif %}
+        {% endfor %}
+
+        {% if items_page.has_next %}
+            <a href="?page={{ items_page.next_page_number }}" class="btn btn-outline-primary">&raquo;</a>
+        {% endif %}
+    </div>
+    {% endif %}
+{% else %}
+    <p>No items found.</p>
+{% endif %}
+		            </div>
+					</div>
+				</div>
+	<!-- //top products -->
+
+	<!-- middle section -->
+
+	<!-- middle section -->
+<div style="margin: 8px auto; display: block; text-align:center;">
+
+<!---728x90--->
+ 
+</div>
+
+	<!-- //copyright -->
+
+	<!-- js-files -->
+	<!-- common jquery plugin -->
+	<script src=" {% static 'js/jquery-3.3.1.min.js' %} "></script>
+	<!-- //common jquery plugin -->
+
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- js -->
+	<script src=" {% static 'js/jquery-1.11.1.min.js' %} "></script>
+	<!-- //js -->
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src=" {% static 'js/move-top.js' %} "></script>
+	<script type="text/javascript" src=" {% static 'js/easing.js' %} "></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+
+	<!-- nav smooth scroll -->
+	<script>
+		$(document).ready(function () {
+			$(".dropdown").hover(
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+					$(this).toggleClass('open');
+				},
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+					$(this).toggleClass('open');
+				}
+			);
+		});
+	</script>
+	<!-- //nav smooth scroll -->
+
+	<!-- popup modal (for location)-->
+	<script src=" {% static 'js/jquery.magnific-popup.js' %} "></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<!-- //popup modal (for location)-->
+
+	<!-- scroll seller -->
+	<script src=" {% static 'js/scroll.js' %} "></script>
+	<!-- //scroll seller -->
+
+	<!-- cart-js -->
+	<script src=" {% static 'js/minicart.js' %} "></script>
+	<script>
+		paypals.minicarts
+			.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+
+		paypals.minicarts.cart.on('checkout', function (evt) {
+			var items = this.items(),
+				len = items.length,
+				total = 0,
+				i;
+
+			// Count the number of each item in the cart
+			for (i = 0; i < len; i++) {
+				total += items[i].get('quantity');
+			}
+
+			if (total < 3) {
+				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+				evt.preventDefault();
+			}
+		});
+	</script>
+	<!-- //cart-js -->
+
+	<!-- password-script -->
+	<script>
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<!-- theme switch js (light and dark)-->
+	<script src=" {% static 'js/theme-change.js' %} "></script>
+	<script>
+		function autoType(elementClass, typingSpeed) {
+			var thhis = $(elementClass);
+			thhis.css({
+				"position": "relative",
+				"display": "inline-block"
+			});
+			thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+			thhis = thhis.find(".text-js");
+			var text = thhis.text().trim().split('');
+			var amntOfChars = text.length;
+			var newString = "";
+			thhis.text("|");
+			setTimeout(function () {
+				thhis.css("opacity", 1);
+				thhis.prev().removeAttr("style");
+				thhis.text("");
+				for (var i = 0; i < amntOfChars; i++) {
+					(function (i, char) {
+						setTimeout(function () {
+							newString += char;
+							thhis.text(newString);
+						}, i * typingSpeed);
+					})(i + 1, text[i]);
+				}
+			}, 1500);
+		}
+
+		$(document).ready(function () {
+			// Now to start autoTyping just call the autoType function with the 
+			// class of outer div
+			// The second paramter is the speed between each letter is typed.   
+			autoType(".type-js", 200);
+		});
+	</script>
+	<!-- //theme switch js (light and dark)-->
+
+	<!-- disable body scroll which navbar is in active -->
+	<script>
+		$(function () {
+			$('.navbar-toggler').click(function () {
+				$('body').toggleClass('noscroll');
+			})
+		});
+	</script>
+	<!-- //disable body scroll which navbar is in active -->
+
+	<!--bootstrap-->
+	<script src=" {% static 'js/bootstrap.min.js' %} "></script>
+	<!-- //bootstrap-->
+	<!-- //Js scripts -->
+
+</body>
+
+
+<!-- Mirrored from demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/product.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Dec 2022 10:54:02 GMT -->
+</html>
+{% endblock %}

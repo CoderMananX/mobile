@@ -1,0 +1,376 @@
+{% extends 'basic.html' %}
+{% block title %} Payment Page - THE COMPUTER'S TOWN{% endblock %}
+{% block body %}
+{% include 'messages.html' %}
+{% load static %}
+	<!-- //navigation -->
+
+	<!-- banner-2 -->
+	<div class="page-head_agile_info_w3l inner-contact-page">
+		<div class="container py-5">
+			<h3 class="title-style text-white pt-5"><span>Payment</span>  Page</h3>
+			<ul class="w3_short pt-3 pb-5">
+				<li>
+					<a href=" {% static 'index.html' %} " class="text-white">Home</a>
+					<i class="fa fa-angle-right mx-2 text-white" aria-hidden="true"></i>
+				</li>
+				<li class="text-light">Payment Page</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //banner-2 -->
+	<!-- page -->
+	<div class="services-breadcrumb">
+		<div class="agile_inner_breadcrumb">
+
+		</div>
+	</div>
+	<!-- //page -->
+<div style="margin: 8px auto; display: block; text-align:center;">
+
+<!---728x90--->
+
+ 
+</div>
+	<!-- payment page-->
+	<div class="privacy py-sm-5 py-5">
+		<div class="container py-md-5 py-4">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">Payment</h3>
+			<!-- //tittle heading -->
+			<div class="checkout-right">
+				<!--Horizontal Tab-->
+				<div id="parentHorizontalTab">
+					<ul class="resp-tabs-list hor_1">
+
+						<li>Credit/Debit</li>
+
+
+					</ul>
+					<br>
+					<div class="resp-tabs-container hor_1">
+
+
+						<div>
+							<form action="/verifypayment" method="post" class="creditly-card-form agileinfo_form">
+								{% csrf_token %}
+								<div class="creditly-wrapper wthree, w3_agileits_wrapper">
+									<div class="credit-card-wrapper">
+										<div class="first-row form-group">
+											<div class="controls">
+												<label class="control-label">Name on Card</label>
+												<input class="billing-address-name form-control" type="text" name="name"
+													placeholder="Your Name">
+											</div>
+											<div class="w3_agileits_card_number_grids my-3">
+												<div class="w3_agileits_card_number_grid_left">
+													<div class="controls">
+														<label class="control-label">Card Number</label>
+														<input  class="number credit-card-number form-control"
+															type="text" name="number" maxlength="16" inputmode="numeric"
+															autocomplete="cc-number"
+															placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
+													</div>
+												</div>
+												<div class="w3_agileits_card_number_grid_right mt-2">
+													<div class="controls">
+														<label class="control-label">CVV</label>
+														<input class="security-code form-control" inputmode="numeric"
+															type="password" name="security-code"
+															maxlength="3" placeholder="&#149;&#149;&#149; ">
+													</div>
+												</div>
+												<div class="clear"> </div>
+											</div>
+											<div class="controls">
+												<label class="control-label">Expiration Date</label>
+												<input class="expiration-month-and-year form-control" type="text"
+													name="expiration-month-and-year" placeholder="MM / YY" maxlength="4">
+											</div>
+										</div>
+										<button class="submit mt-3"><span>Make a Payment</span></button>
+									</div>
+								</div>
+							</form>
+						</div>
+
+
+					</div>
+				</div>
+
+<!--				online payment-->
+				<!--Plug-in Initialisation-->
+<!--			</div>-->
+<!--			<form class="text-center border border-light p-5" action="/success" method="POST">-->
+<!--				{% csrf_token %}-->
+
+<!--				&lt;!&ndash; RAZORPAY INTEGRATION HERE &ndash;&gt;-->
+<!--				<script src="https://checkout.razorpay.com/v1/checkout.js"-->
+<!--				data-key="rzp_test_PvM4GxK9MYlCUc"-->
+<!--				data-amount="100"-->
+<!--				data-currency="INR"-->
+<!--				data-buttontext="Pay with Razorpay"-->
+<!--				data-name="THE COMPUTER'S TOWN"-->
+<!--				data-description="Complete Business Solution"-->
+<!--				data-image="https://oibp1.000webhostapp.com/logo.PNG"-->
+<!--				data-prefill.name="patel"-->
+<!--				data-prefill.email="user123@gamil.com"-->
+<!--				data-theme.color="#F37254">-->
+
+<!--				</script>-->
+<!--			</form>-->
+<!--		</div>-->
+<!--	</div>-->
+
+
+
+	<!-- js-files -->
+	<!-- common jquery plugin -->
+	<script src=" {% static 'js/jquery-3.3.1.min.js' %} "></script>
+	<!-- //common jquery plugin -->
+
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- js -->
+	<script src=" {% static 'js/jquery-1.11.1.min.js' %} "></script>
+	<!-- //js -->
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src=" {% static 'js/move-top.js' %} "></script>
+	<script type="text/javascript" src=" {% static 'js/easing.js' %} "></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+
+	<!-- nav smooth scroll -->
+	<script>
+		$(document).ready(function () {
+			$(".dropdown").hover(
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+					$(this).toggleClass('open');
+				},
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+					$(this).toggleClass('open');
+				}
+			);
+		});
+	</script>
+	<!-- //nav smooth scroll -->
+
+	<!-- popup modal (for location)-->
+	<script src=" {% static 'js/jquery.magnific-popup.js' %} "></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<!-- //popup modal (for location)-->
+
+	<!-- easy-responsive-tabs -->
+	<link rel="stylesheet" type="text/css" href=" {% static 'css/easy-responsive-tabs.css' %} " />
+	<script src=" {% static 'js/easyResponsiveTabs.js' %} "></script>
+
+	<script>
+		$(document).ready(function () {
+			//Horizontal Tab
+			$('#parentHorizontalTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion
+				width: 'auto', //auto or any width like 600px
+				fit: true, // 100% fit in a container
+				tabidentify: 'hor_1', // The tab groups identifier
+				activate: function (event) { // Callback function if tab is switched
+					var $tab = $(this);
+					var $info = $('#nested-tabInfo');
+					var $name = $('span', $info);
+					$name.text($tab.text());
+					$info.show();
+				}
+			});
+		});
+	</script>
+	<!-- //easy-responsive-tabs -->
+
+	<!-- credit-card -->
+	<script src=" {% static 'js/creditly.js' %} "></script>
+	<link rel="stylesheet" href=" {% static 'css/creditly.css' %} " type="text/css" media="all" />
+	<script>
+		$(function () {
+			var creditly = Creditly.initialize(
+				'.creditly-wrapper .expiration-month-and-year',
+				'.creditly-wrapper .credit-card-number',
+				'.creditly-wrapper .security-code',
+				'.creditly-wrapper .card-type');
+
+
+			$(".creditly-card-form .submit").click(function (e) {
+				e.preventDefault();
+				var output = creditly.validate();
+				if (output) {
+					// Your validated credit card output
+					console.log(output);
+				}
+			});
+		});
+	</script>
+
+	<!-- creditly2 (for paypal) -->
+	<script src=" {% static 'js/creditly2.js' %} "></script>
+	<script>
+		$(function () {
+			var creditly = Creditly2.initialize(
+				'.creditly-wrapper .expiration-month-and-year-2',
+				'.creditly-wrapper .credit-card-number-2',
+				'.creditly-wrapper .security-code-2',
+				'.creditly-wrapper .card-type');
+
+			$(".creditly-card-form-2 .submit").click(function (e) {
+				e.preventDefault();
+				var output = creditly.validate();
+				if (output) {
+					// Your validated credit card output
+					console.log(output);
+				}
+			});
+		});
+	</script>
+	<!-- //credit-card -->
+
+	<!-- cart-js -->
+	<script src=" {% static 'js/minicart.js' %} "></script>
+	<script>
+		paypals.minicarts
+			.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+
+		paypals.minicarts.cart.on('checkout', function (evt) {
+			var items = this.items(),
+				len = items.length,
+				total = 0,
+				i;
+
+			// Count the number of each item in the cart
+			for (i = 0; i < len; i++) {
+				total += items[i].get('quantity');
+			}
+
+			if (total < 3) {
+				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+				evt.preventDefault();
+			}
+		});
+	</script>
+	<!-- //cart-js -->
+
+	<!-- password-script -->
+	<script>
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<!-- theme switch js (light and dark)-->
+	<script src=" {% static 'js/theme-change.js' %} "></script>
+	<script>
+		function autoType(elementClass, typingSpeed) {
+			var thhis = $(elementClass);
+			thhis.css({
+				"position": "relative",
+				"display": "inline-block"
+			});
+			thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+			thhis = thhis.find(".text-js");
+			var text = thhis.text().trim().split('');
+			var amntOfChars = text.length;
+			var newString = "";
+			thhis.text("|");
+			setTimeout(function () {
+				thhis.css("opacity", 1);
+				thhis.prev().removeAttr("style");
+				thhis.text("");
+				for (var i = 0; i < amntOfChars; i++) {
+					(function (i, char) {
+						setTimeout(function () {
+							newString += char;
+							thhis.text(newString);
+						}, i * typingSpeed);
+					})(i + 1, text[i]);
+				}
+			}, 1500);
+		}
+
+		$(document).ready(function () {
+			// Now to start autoTyping just call the autoType function with the 
+			// class of outer div
+			// The second paramter is the speed between each letter is typed.   
+			autoType(".type-js", 200);
+		});
+	</script>
+	<!-- //theme switch js (light and dark)-->
+
+	<!-- disable body scroll which navbar is in active -->
+	<script>
+		$(function () {
+			$('.navbar-toggler').click(function () {
+				$('body').toggleClass('noscroll');
+			})
+		});
+	</script>
+	<!-- //disable body scroll which navbar is in active -->
+
+	<!--bootstrap-->
+	<script src=" {% static 'js/bootstrap.min.js' %} "></script>
+	<!-- //bootstrap-->
+	<!-- //Js scripts -->
+
+</body>
+
+
+{% endblock %}

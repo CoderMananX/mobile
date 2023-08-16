@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+{% block content %}
+
+<link href=" {% static 'images/logo2.png' %} " rel="icon">
+<link href="{% static 'images/logo2.png' %}" rel="apple-touch-icon">
+<!-- Mirrored from demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Dec 2022 10:51:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>{% block title%} {% endblock %}</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Custom-Files -->
+	<link href=" {% static 'css/bootstrap.css' %} " rel="stylesheet" type="text/css" media="all" />
+	<!-- Bootstrap css -->
+	<link href=" {% static 'css/style.css' %} " rel="stylesheet" type="text/css" media="all" />
+	<!-- Main css -->
+	<link rel="stylesheet" href=" {% static 'css/fontawesome-all.css' %} ">
+	<!-- Font-Awesome-Icons-CSS -->
+	<link href=" {% static 'css/popuo-box.css' %} " rel="stylesheet" type="text/css" media="all" />
+	<!-- pop-up-box -->
+	<link href=" {% static 'css/menu.css' %} " rel="stylesheet" type="text/css" media="all" />
+	<!-- menu style -->
+	<!-- //Custom-Files -->
+
+	<!-- web fonts -->
+	<link href="http://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+		rel="stylesheet">
+	<!-- //web fonts -->
+	<link rel="stylesheet" type="text/css" rel="stylesheet" target="_blank" href="{% static 'css/profile.css' %}">
+	<script src="{% static 'js/responsive.js' %}"></script>
+</head>
+
+<body>
+<script src=" {% static '../../../../../../../m.servedby-buysellads.com/monetization.js' %} " type="text/javascript"></script>
+<script>
+(function(){
+	if(typeof _bsa !== 'undefined' && _bsa) {
+  		// format, zoneKey, segment:value, options
+  		_bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
+  	}
+})();
+</script>
+<script>
+(function(){
+if(typeof _bsa !== 'undefined' && _bsa) {
+	// format, zoneKey, segment:value, options
+	_bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
+}
+})();
+</script>
+<script>
+(function(){
+	if(typeof _bsa !== 'undefined' && _bsa) {
+  		// format, zoneKey, segment:value, options
+  		_bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
+  	}
+})();
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-98H8KRKT85'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-98H8KRKT85');
+</script>
+
+<meta name="robots" content="noindex">
+<body><link rel="stylesheet" href=" {% static '../../../../../../assests/css/font-awesome.min.css' %} ">
+<!-- New toolbar-->
+<style>
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+
+#w3lDemoBar.w3l-demo-bar {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 40px 5px;
+  padding-top:70px;
+  margin-bottom: 70px;
+  background: #0D1326;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+#w3lDemoBar.w3l-demo-bar a {
+  display: block;
+  color: #e6ebff;
+  text-decoration: none;
+  line-height: 24px;
+  opacity: .6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#w3lDemoBar.w3l-demo-bar span.w3l-icon {
+  display: block;
+}
+
+#w3lDemoBar.w3l-demo-bar a:hover {
+  opacity: 1;
+}
+
+#w3lDemoBar.w3l-demo-bar .w3l-icon svg {
+  color: #e6ebff;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons {
+  margin-top: 30px;
+  border-top: 1px solid #41414d;
+  padding-top: 40px;
+}
+#w3lDemoBar.w3l-demo-bar .demo-btns {
+  border-top: 1px solid #41414d;
+  padding-top: 30px;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons a span.fa {
+  font-size: 26px;
+}
+#w3lDemoBar.w3l-demo-bar .no-margin-bottom{
+  margin-bottom:0;
+}
+.toggle-right-sidebar span {
+  background: #0D1326;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #e6ebff;
+  border-radius: 50px;
+  font-size: 26px;
+  cursor: pointer;
+  opacity: .5;
+}
+.pull-right {
+  float: right;
+  position: fixed;
+  right: 0px;
+  top: 70px;
+  width: 90px;
+  z-index: 99999;
+  text-align: center;
+}
+/* ============================================================
+RIGHT SIDEBAR SECTION
+============================================================ */
+
+#right-sidebar {
+  width: 90px;
+  position: fixed;
+  height: 100%;
+  z-index: 1000;
+  right: 0px;
+  top: 0;
+  margin-top: 60px;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  overflow-y: auto;
+}
+
+
+/* ============================================================
+RIGHT SIDEBAR TOGGLE SECTION
+============================================================ */
+
+.hide-right-bar-notifications {
+  margin-right: -300px !important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+
+@media (max-width: 992px) {
+  #w3lDemoBar.w3l-demo-bar a.desktop-mode{
+      display: none;
+
+  }
+}
+@media (max-width: 767px) {
+  #w3lDemoBar.w3l-demo-bar a.tablet-mode{
+      display: none;
+
+  }
+}
+@media (max-width: 568px) {
+  #w3lDemoBar.w3l-demo-bar a.mobile-mode{
+      display: none;
+  }
+  #w3lDemoBar.w3l-demo-bar .responsive-icons {
+      margin-top: 0px;
+      border-top: none;
+      padding-top: 0px;
+  }
+  #right-sidebar,.pull-right {
+      width: 90px;
+  }
+  #w3lDemoBar.w3l-demo-bar .no-margin-bottom-mobile{
+      margin-bottom: 0;
+  }
+}
+</style>
+
+<div id="right-sidebar" class="right-sidebar-notifcations nav-collapse">
+<div class="bs-example bs-example-tabs right-sidebar-tab-notification" data-example-id="togglable-tabs">
+
+
+        <!---<div class="responsive-icons">
+            <a href=" {% static '#url' {% static ' %} " class="desktop-mode">' %}
+                <span class="w3l-icon -desktop">
+                    <span class="fa fa-desktop"></span>
+                </span>
+            </a>
+            <a href=" {% static '#url' {% static ' %} " class="tablet-mode">' %}
+                <span class="w3l-icon -tablet">
+                    <span class="fa fa-tablet"></span>
+                </span>
+            </a>
+            <a href=" {% static '#url' {% static ' %} " class="mobile-mode no-margin-bottom">' %}
+                <span class="w3l-icon -mobile">
+                    <span class="fa fa-mobile"></span>
+                </span>
+            </a>
+        </div>-->
+    </div>
+    <div class="right-sidebar-panel-content animated fadeInRight" tabindex="5003"
+        style="overflow: hidden; outline: none;">
+    </div>
+</div>
+</div>
+
+
+	<!-- top-header -->
+	<div class="agile-main-top">
+		<div class="container">
+			<div class="row main-top-w3l py-2">
+				<div class="col-lg-3 col-sm-4 header-most-top">
+					<p class=" text-lg-left text-center">Welcome to our shop!</p>
+				</div>
+				<div class="col-lg-9 col-sm-8 header-right ml-auto text-sm-right text-center">
+					<!-- header lists -->
+					<ul class="top-header-lists">
+						{% if request.session.log_user %}
+						<li class="mx-3">
+							<a href="/logout">
+								<i class="fas fa-sign-in-alt mr-1"></i> Log Out </a>
+						</li>
+							{% if profiledata.Name == None %}
+								<li class="mx-3">
+									<a href="#" data-toggle="modal" data-target="#exampleModalCenterProfile">
+                                         <i class="fas fa-sign-in-alt mr-1"></i> Profile</a>
+								</li>
+                                {% else %}
+
+								<li class="mx-3">
+									<a href="/yourprofile">
+                                         <i class="fas fa-sign-in-alt mr-1"></i> Profile</a>
+								</li>
+                                {% endif %}
+
+
+						{% else %}
+						<li class="mx-3">
+							<a href=" {% static '#login' %} " data-toggle="modal" data-target="#exampleModal" class="">
+								<i class="fas fa-sign-in-alt mr-1"></i> Log In </a>
+						</li>
+						<li>
+							<a href=" {% static '#register' %} " data-toggle="modal" data-target="#exampleModal2" class="">
+								<i class="fas fa-sign-out-alt mr-1"></i>Register </a>
+						</li>
+						{% endif %}
+					</ul>
+					<!-- //header lists -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Button trigger modal(select-location) -->
+
+	<!-- //shop locator (popup) -->
+	<!-- modals -->
+	<!-- log in -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-center">Log In</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="/checkuser" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email" name="email" required="">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Password" name="password"
+								required="">
+						</div>
+						<div class="right-w3l">
+							<input type="submit" class="form-control" value="Log in">
+						</div>
+
+						<p class="text-center dont-do mt-3">Don't have an account ?
+							<a href="#" data-toggle="modal" data-target="#exampleModal2">
+								Register Now</a>
+						</p>
+<!--						<p class="text-center dont-do mt-3">Forgot Password ?-->
+<!--							<a href="#" data-toggle="modal" data-target="#exampleModalForgot">-->
+<!--								Click here</a>-->
+<!--						</p>-->
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="exampleModalForgot" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-center">Forgot Password</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="/forgotpassword" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email" name="email" required="">
+						</div>
+						<div class="right-w3l">
+							<input type="submit" class="form-control" value="Submit">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- register -->
+	<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Register</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="/viewdata" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email" name="email" required="">
+						</div>
+						<div class="form-group">
+							<input type="number" class="form-control" placeholder="Phone" name="phone" required="" maxlength="10" minlength="10">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Password" name="Password"
+								   required="">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Confirm Password"
+								name="Confirm Password" required="">
+						</div>
+						<div class="right-w3l">
+							<input type="submit" class="form-control" value="Register">
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+
+	<!-- Prodile -->
+	<div class="modal fade" id="exampleModalCenterProfile" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Profile </h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="/completeprofile" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="form-group">
+							<label class="mb-2">Name:</label>
+							<input type="text" class="form-control" placeholder="Name" name="name" required="">
+						</div>
+						<div class="form-group">
+							<label class="mb-2">DOB:</label>
+							<input type="date" class="form-control" max="2005-12-31" min="1979-01-01" placeholder="Date of Birth" name="dob" required="">
+						</div>
+						<div class="form-group">
+                                <label class="mb-2">Address</label>
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Address" required="">
+						</div>
+						<div class="form-group">
+                                <label for="dp">Upload Profile Picture:</label>
+                                <input type="file" name="dp" id="dp" class="form-control">
+						</div>
+
+						<div class="form-group">
+
+                               <label>Choose a Area:</label>
+                                    <select  id="areaname" name="areaname">
+                                        {% for a in areadetail %}
+                                      <option value="{{a.id}}">{{a.Area_name}}</option>
+                                        {% endfor %}
+                                    </select>
+                            </div>
+
+                            <div class="form-group">
+                               <label>Choose a City:</label>
+                                    <select id="cityname" name="cityname">
+                                        {% for city in citydetail %}
+                                      <option value="{{city.id}}">{{city.City_name}}</option>
+                                    {% endfor %}
+                                    </select>
+                            </div>
+
+                            <div class="form-group">
+                               <label>Choose a State:</label>
+                                    <select id="statename" name="statename">
+                                        {% for s in statedetail %}
+                                      <option value="{{s.id}}">{{s.State_name}}</option>
+                                        {% endfor %}
+                                    </select>
+
+                            </div>
+
+						<div class="right-w3l">
+							<input type="submit" class="form-control" value="Register">
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Profile -->
+
+	<!-- //top-header -->
+
+	<!-- header-bottom-->
+	<div class="header-bot my-md-4 my-3" id="site-header">
+		<div class="container">
+			<div class="row header-bot_inner_wthreeinfo_header_mid align-items-center">
+				<!-- logo -->
+				<div class="col-lg-3 col-md-4 logo_agile">
+					<h1>
+						<a href=" {% url 'index.html' %} "><span>T</span>he <span>C</span>omputer's <span>T</span>own</a>
+					</h1>
+				</div>
+				<!-- //logo -->
+				<!-- header-bot -->
+				<div class="col-lg-9 col-md-8 header">
+					<div class="row">
+						<!-- search -->
+						<div class="col-lg-9 col-sm-8 agileits_search">
+							<form class="form-inline" action="/searchresult" style="max-width:600px;">{% csrf_token %}
+								<input class="form-control" type="search" name="search"
+									placeholder="Search for products, brands and more" aria-label="Search" required>
+								<button class="btn" type="submit"><i class="fa fa-search"
+										aria-hidden="true"></i></button>
+							</form>
+						</div>
+						<!-- //search -->
+						<!-- cart details -->
+						<div
+							class="col-lg-3 col-sm-4 top_nav_right text-center mt-sm-0 mt-2 d-flex align-items-center justify-content-between">
+							<div class="cart-store">
+								<!-- toggle switch for light and dark theme -->
+								<div class="cont-ser-position">
+									<nav class="navigation">
+										<div class="theme-switch-wrapper">
+											<label class="theme-switch" for="checkbox">
+												<input type="checkbox" id="checkbox">
+												<div class="mode-container">
+													<i class="gg-sun"></i>
+													<i class="gg-moon"></i>
+												</div>
+											</label>
+										</div>
+									</nav>
+								</div>
+								<!-- //toggle switch for light and dark theme -->
+							</div>
+{% if request.session.log_user %}
+							<div class="wthreecartaits wthreecartaits2 cart cart box_1">
+								<form action="/cart" class="last text-right">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="display" value="1">
+									<button class="btn w3view-cart p-0" type="submit" name="submit" value="">
+										<img src=" {% static 'images/cart.png' %} " alt="" class="img-fluid"> Cart
+									</button>
+								</form>
+							</div>
+{% endif %}
+						</div>
+						<!-- //cart details -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- shop locator (popup) -->
+	<!-- //header-bottom -->
+	<!-- navigation -->
+	<div class="navbar-inner">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light">
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav text-center ml-auto">
+						<li {% if request.resolver_match.url_name == 'index.html' %} class="nav-item active mr-lg-2 mb-lg-0 mb-2" {% endif %} >
+							<a class="nav-link" href=" {% url 'index.html' %} ">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								All Categories
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="/categorywiseproduct/11">All In One</a>
+								<a class="dropdown-item" href="/categorywiseproduct/12">Desktop System</a>
+								<a class="dropdown-item" href="/categorywiseproduct/13">iPad</a>
+								<a class="dropdown-item" href="/categorywiseproduct/14">Laptops</a>
+								<a class="dropdown-item" href="/categorywiseproduct/15">MacBook</a>
+								<a class="dropdown-item" href="/categorywiseproduct/16">Moniter</a>
+								<a class="dropdown-item" href="/categorywiseproduct/17">Printers</a>
+								<a class="dropdown-item" href="/categorywiseproduct/18">Server</a>
+								<a class="dropdown-item" href="/categorywiseproduct/19">Accessories</a>
+
+							</div>
+
+						</li>
+
+						<li {% if request.resolver_match.url_name == 'about.html' %} class="nav-item active mr-lg-2 mb-lg-0 mb-2" {% endif %}">
+							<a class="nav-link" href=" {% url 'about.html' %} ">About Us</a>
+						</li>
+
+						<li {% if request.resolver_match.url_name == 'product.html' %} class="nav-item active mr-lg-2 mb-lg-0 mb-2" {% endif %}>
+							<a class="nav-link" href=" {% url 'product.html' %} ">New Arrivals</a>
+						</li>
+
+						<li {% if request.resolver_match.url_name == 'contact.html' %} class="nav-item active mr-lg-2 mb-lg-0 mb-2" {% endif %}>
+							<a class="nav-link" href=" {% url 'contact.html' %} ">Contact Us</a>
+						</li>
+						{% if request.session.log_user %}
+						<li {% if request.resolver_match.url_name == 'yourorders.html' %} class="nav-item active mr-lg-2 mb-lg-0 mb-2" {% endif %}>
+							<a class="nav-link" href=" {% url 'yourorders.html' %} ">Your Orders</a>
+						</li>{% endif %}
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- //navigation -->
+<div class="container">
+	<div class="container py-5">
+				{% block body %} {% endblock %}
+			</div>
+
+</div>
+	<!-- banner -->
+
+	<!-- top Products -->
+
+	<!-- //top products -->
+
+	<!-- middle section -->
+
+	<!-- middle section -->
+
+	<!-- footer -->
+	<footer>
+		<div class="footer-top-first">
+
+		</div>
+		<!-- footer third section -->
+		<div class="w3l-middlefooter-sec">
+			<div class="container py-5">
+				<div class="row footer-info w3-agileits-info">
+					<!-- footer categories -->
+					<div class="col-md-3 col-sm-6 footer-grids">
+						<h3 class="mb-3">Categories</h3>
+						<ul>
+							<li class="mb-3">
+								<a  href="/categorywiseproduct/11">All In One</a>
+							</li>
+
+							<li class="mb-3">
+								<a  href="/categorywiseproduct/12">Desktop System</a>
+							</li>
+
+							<li class="mb-3">
+								<a  href="/categorywiseproduct/13">iPad</a>
+							</li>
+
+							<li class="mb-3">
+								<a href="/categorywiseproduct/14">Laptops</a>
+							</li>
+
+							<li class="mb-3">
+								<a href="/categorywiseproduct/15">MacBook</a>
+							</li>
+
+							<li class="mb-3">
+								<a  href="/categorywiseproduct/16">Moniter</a>
+							</li>
+
+							<li class="mb-3">
+								<a  href="/categorywiseproduct/17">Printers</a>
+							</li>
+
+							<li class="mb-3">
+								<a  href="/categorywiseproduct/18">Server</a>
+							</li>
+
+							<li class="mb-3">
+								<a href="/categorywiseproduct/19">Accessories</a>
+							</li>
+
+
+
+
+						</ul>
+					</div>
+					<!-- //footer categories -->
+					<!-- quick links -->
+					<div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
+						<h3 class="mb-3">Quick Links</h3>
+						<ul>
+							<li class="mb-3">
+								<a href=" {% url 'about.html' %} ">About Us</a>
+							</li>
+							<li class="mb-3">
+								<a href=" {% url 'contact.html' %} ">Contact Us</a>
+							</li>
+<!--							<li class="mb-3">-->
+<!--								<a href=" {% static 'help.html' %} ">Help</a>-->
+<!--							</li>-->
+<!--							<li class="mb-3">-->
+<!--								<a href=" {% static 'faqs.html' %} ">Faqs</a>-->
+<!--							</li>-->
+<!--							<li class="mb-3">-->
+<!--								<a href=" {% static 'terms.html' %} ">Terms of use</a>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<a href=" {% static 'privacy.html' %} ">Privacy Policy</a>-->
+<!--							</li>-->
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
+						<h3 class="mb-3">Get in Touch</h3>
+						<ul>
+
+<!--							<li class="mb-3">-->
+<!--								<i class="fas fa-mobile"></i><a href=" {% static 'tel:+12 23456790' %} ">  7016556318</a> </li>-->
+							<li class="mb-3">
+								<i class="fas fa-phone"></i><a href=" {% static 'tel:+91 7016556318' %} ">+91 7016556318 </a> </li>
+							<li class="mb-3">
+								<i class="fas fa-envelope-open"></i>
+								<a href=" {% static 'thecomputerstown@gmail.com' %} ">thecomputerstown@gmail.com</a>
+							</li>
+
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
+						<!-- newsletter -->
+
+						<!-- //newsletter -->
+						<!-- social icons -->
+						<div class="footer-grids  w3l-socialmk mt-3">
+							<h3 class="mb-3">Follow Us on</h3>
+							<div class="social">
+								<ul>
+									<li>
+										<a class="icon fb" href="https://www.facebook.com/profile.php?id=100083061682422&mibextid=ZbWKwL">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+									</li>
+									<li>
+										<a class="icon tw" href="https://instagram.com/computers_town_?igshid=YmMyMTA2M2Y=">
+											<i class="fab fa-instagram" style="color: #fafafa; " style="font-size:75px"></i>
+										</a>
+
+									</li>
+									<li>
+										<a class="icon gp" href=" {% url 'index.html' %} ">
+											<i class="fab fa-google-plus-g"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //social icons -->
+					</div>
+				</div>
+				<!-- //quick links -->
+			</div>
+		</div>
+		<!-- //footer third section -->
+
+		<!-- footer fourth section -->
+
+		<!-- //footer fourth section (text) -->
+	</footer>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copy-right py-3">
+		<div class="container">
+			<p class="text-center ">© 2023 The Computer's Town.
+<!--				All rights reserved -->
+<!--				| Design by-->
+<!--				<a href="http://mananpatel.rf.gd/"> MANAN.</a>-->
+			</p>
+		</div>
+	</div>
+	<!-- //copyright -->
+
+	<!-- js-files -->
+	<!-- common jquery plugin -->
+	<script src=" {% static 'js/jquery-3.3.1.min.js' %} "></script>
+	<!-- //common jquery plugin -->
+
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- js -->
+	<script src=" {% static 'js/jquery-1.11.1.min.js' %} "></script>
+	<!-- //js -->
+	<!-- start-smoth-scrolling -->
+
+	<script type="text/javascript" src=" {% static 'js/move-top.js' %} "></script>
+	<script type="text/javascript" src=" {% static 'js/easing.js' %} "></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+
+	<!-- nav smooth scroll -->
+	<script>
+		$(document).ready(function () {
+			$(".dropdown").hover(
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+					$(this).toggleClass('open');
+				},
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+					$(this).toggleClass('open');
+				}
+			);
+		});
+	</script>
+	<!-- //nav smooth scroll -->
+
+	<!-- popup modal (for location)-->
+	<script src=" {% static 'js/jquery.magnific-popup.js' %} "></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<!-- //popup modal (for location)-->
+
+	<!-- scroll seller -->
+	<script src=" {% static 'js/scroll.js' %} "></script>
+	<!-- //scroll seller -->
+
+	<!-- cart-js -->
+
+	<!-- //cart-js -->
+
+	<!-- password-script -->
+	<script>
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<!-- theme switch js (light and dark)-->
+	<script src=" {% static 'js/theme-change.js' %} "></script>
+	<script>
+		function autoType(elementClass, typingSpeed) {
+			var thhis = $(elementClass);
+			thhis.css({
+				"position": "relative",
+				"display": "inline-block"
+			});
+			thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+			thhis = thhis.find(".text-js");
+			var text = thhis.text().trim().split('');
+			var amntOfChars = text.length;
+			var newString = "";
+			thhis.text("|");
+			setTimeout(function () {
+				thhis.css("opacity", 1);
+				thhis.prev().removeAttr("style");
+				thhis.text("");
+				for (var i = 0; i < amntOfChars; i++) {
+					(function (i, char) {
+						setTimeout(function () {
+							newString += char;
+							thhis.text(newString);
+						}, i * typingSpeed);
+					})(i + 1, text[i]);
+				}
+			}, 1500);
+		}
+
+		$(document).ready(function () {
+			// Now to start autoTyping just call the autoType function with the
+			// class of outer div
+			// The second paramter is the speed between each letter is typed.
+			autoType(".type-js", 200);
+		});
+	</script>
+	<!-- //theme switch js (light and dark)-->
+
+	<!-- disable body scroll which navbar is in active -->
+	<script>
+		$(function () {
+			$('.navbar-toggler').click(function () {
+				$('body').toggleClass('noscroll');
+			})
+		});
+	</script>
+	<!-- //disable body scroll which navbar is in active -->
+
+	<!--bootstrap-->
+	<script src=" {% static 'js/bootstrap.min.js' %} "></script>
+	<!-- //bootstrap-->
+	<!-- //Js scripts -->
+{% block js %} {% endblock %}
+
+</body>
+{% endblock content %}
+
+<!-- Mirrored from demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Dec 2022 10:51:19 GMT -->
+</html>
